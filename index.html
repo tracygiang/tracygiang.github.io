@@ -37,6 +37,17 @@
 			#one.tiles article:hover header:after { opacity: 1; transform: translateY(0); }
 				/* Banner intro paragraph: normal body text */
 				#banner > .inner .content p { font-size: 1em; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.65; }
+				/* Banner background photo + readable dark text */
+				#banner { background-image: url("images/banner-bg.svg"); background-size: cover; background-position: center; }
+				#banner:after { display: none; }
+				#banner .inner, #banner h1, #banner .content, #banner .content p { color: #2a2f45; }
+				#banner .inner header > :first-child:after { background-color: #2a2f45; }
+				#banner .button.next { color: #2a2f45; box-shadow: inset 0 0 0 2px #2a2f45; }
+				#banner .button.next:hover { background-color: #2a2f45; color: #ffffff; }
+				/* Center banner content inside the window box */
+				#banner > .inner { width: 70%; margin-left: auto; margin-right: auto; text-align: center; }
+				#banner > .inner header > :first-child:after { margin-left: auto; margin-right: auto; }
+				#banner > .inner .content { -webkit-justify-content: center; -ms-justify-content: center; justify-content: center; }
 		</style>
 	</head>
 	<body class="is-preload">

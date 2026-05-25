@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <!-- Base -->
+  <rect width="1920" height="1080" fill="#9fb1d6"/>
+
+  <!-- Soft organic washes -->
+  <path d="M0 0 H760 C700 180 540 120 470 300 C400 480 560 560 470 760 C390 940 120 900 0 1040 Z" fill="#aebede" opacity="0.7"/>
+  <path d="M1920 0 V520 C1740 470 1660 300 1380 360 C1180 405 1240 120 1500 60 C1640 25 1800 40 1920 0 Z" fill="#cdd9f0" opacity="0.65"/>
+  <path d="M1920 1080 H980 C1080 940 1320 980 1460 860 C1620 720 1760 800 1920 720 Z" fill="#8fa3cc" opacity="0.55"/>
+  <path d="M0 1080 H520 C420 960 220 1000 150 880 C90 780 40 840 0 800 Z" fill="#c3d0ec" opacity="0.5"/>
+
+  <!-- Window frame -->
+  <rect x="212" y="118" width="1496" height="844" rx="10" fill="#93a7cf" stroke="#ffffff" stroke-width="6"/>
+
+  <!-- Window dots -->
+  <g>
+    <circle cx="292" cy="198" r="28" fill="#ffffff"/>
+    <circle cx="292" cy="198" r="18" fill="#7c7c7c"/>
+    <circle cx="424" cy="198" r="28" fill="#ffffff"/>
+    <circle cx="424" cy="198" r="18" fill="#7c7c7c"/>
+    <circle cx="556" cy="198" r="28" fill="#ffffff"/>
+    <circle cx="556" cy="198" r="18" fill="#7c7c7c"/>
+  </g>
+
+  <!-- Sparkles (top right) -->
+  <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round">
+    <path d="M1726 70 C1736 100 1746 110 1776 120 C1746 130 1736 140 1726 170 C1716 140 1706 130 1676 120 C1706 110 1716 100 1726 70 Z"/>
+    <path d="M1672 196 C1680 220 1688 228 1712 236 C1688 244 1680 252 1672 276 C1664 252 1656 244 1632 236 C1656 228 1664 220 1672 196 Z"/>
+  </g>
+
+  <!-- Hand-drawn marks (bottom left) -->
+  <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 832 l18 26 l16 -34"/>
+    <path d="M210 800 l10 70 M196 832 l28 0"/>
+    <path d="M262 812 l16 30 l16 -34"/>
+    <path d="M348 820 l16 30 l16 -34"/>
+    <path d="M126 904 l16 30 l16 -34"/>
+    <path d="M214 888 l10 64 M200 916 l28 0"/>
+    <path d="M270 912 l14 26 l14 -30"/>
+    <path d="M356 908 l16 30 l16 -34"/>
+    <path d="M188 968 l12 34 M174 996 l28 0"/>
+    <path d="M262 980 l16 30 l16 -34"/>
+    <path d="M348 984 l16 30 l16 -34"/>
+  </g>
+</svg>
