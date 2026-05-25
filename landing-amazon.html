@@ -13,8 +13,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#banner:after { display: none; }
-			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
-			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em 3em; }
+			.project-meta li { margin: 0; }
+			@media (max-width: 736px) { .project-meta { grid-template-columns: 1fr; } }
 			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
 			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
 			.project-gallery figure { margin: 0; }
@@ -145,7 +146,7 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>What we learned</h2>
+										<h2>What I learned</h2>
 									</header>
 									<p>K-Means surfaced five clear customer personas: price-sensitive, premium, popularity-driven, quality seekers, and discount-sensitive frequent buyers. Crucially, the segments held up under scrutiny: a mean ARI of 0.80 across seeds and a significant permutation test (p=0.048) showed the structure was real, not an artifact of the algorithm.</p>
 									<p>The personas translate directly into strategy: offer premium buyers exclusive perks rather than discounts, reach deal-seekers with coupons, and highlight budget essentials for price-sensitive shoppers. The main caveat is that the dataset is product-focused and lacks true customer identifiers, so the segments are inferred behavioral patterns that should be validated against Amazon's internal CRM data before a full rollout.</p>
@@ -158,14 +159,11 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/tracygiang" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tracygiang/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Tracy Giang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>

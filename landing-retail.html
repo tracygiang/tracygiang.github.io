@@ -13,8 +13,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#banner:after { display: none; }
-			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
-			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em 3em; }
+			.project-meta li { margin: 0; }
+			@media (max-width: 736px) { .project-meta { grid-template-columns: 1fr; } }
 			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
 			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
 			.project-gallery figure { margin: 0; }
@@ -137,7 +138,7 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>What we learned</h2>
+										<h2>What I learned</h2>
 									</header>
 									<p>The clearest driver of sales was promotions, which influenced demand nearly twice as much as competition distance and produced the largest spikes. Random Forest captured these non-linear patterns far better than Linear Regression, reaching an R-squared of about 0.30 and cutting error by roughly 9 percent.</p>
 									<p>The model is reliable for typical store performance and good enough for operational planning like inventory allocation and promotion prep, but it consistently underestimates extreme demand spikes. That gap is the practical limit: forecasting the everyday is solved, while the rare blockbuster days still need a human margin of safety.</p>
@@ -150,14 +151,11 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/tracygiang" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tracygiang/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Tracy Giang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>

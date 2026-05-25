@@ -13,8 +13,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#banner:after { display: none; }
-			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
-			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em 3em; }
+			.project-meta li { margin: 0; }
+			@media (max-width: 736px) { .project-meta { grid-template-columns: 1fr; } }
 			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
 			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
 			.project-gallery figure { margin: 0; }
@@ -139,7 +140,7 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>What we learned</h2>
+										<h2>What I learned</h2>
 									</header>
 									<p>The biggest lesson was about data leakage. A model that looks excellent can be quietly cheating, and catching that early changed the whole project. Once we removed the leak, the honest Random Forest reached about 72% accuracy with a strong 86% recall on hits, and the feature importances told a clear story: a film's historical track record, genre, season, and rating carry real predictive signal, while raw revenue does not belong in the inputs at all.</p>
 									<p>We also learned where the model should stop. At 72% accuracy it is a useful screening tool, not a greenlight, and it cannot see the things that often decide a movie's fate: script, casting, direction, and word of mouth. The practical takeaway for a studio is to lean into Musical and Adventure titles, match release timing to each genre's strongest season, and treat the model as one input to a human decision rather than the decision itself.</p>
@@ -152,14 +153,11 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/tracygiang" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tracygiang/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Tracy Giang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>

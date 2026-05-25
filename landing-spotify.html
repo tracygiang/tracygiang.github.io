@@ -13,8 +13,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#banner:after { display: none; }
-			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
-			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em 3em; }
+			.project-meta li { margin: 0; }
+			@media (max-width: 736px) { .project-meta { grid-template-columns: 1fr; } }
 			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
 			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
 			.project-gallery figure { margin: 0; }
@@ -139,7 +140,7 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>What we learned</h2>
+										<h2>What I learned</h2>
 									</header>
 									<p>The clearest finding was a negative one: musical attributes alone are only moderately predictive of streaming success. The Random Forest reached 59% accuracy, barely above the 58% baseline, and missed most actual hits (recall 0.38). The KDE plots explained why: Hits and Non-Hits overlap heavily across nearly every audio feature.</p>
 									<p>Danceability, BPM, valence, and energy were the most useful signals, reflecting a song's rhythm, movement, and emotional brightness. But the gap to a strong model points to everything the audio features cannot see: artist fame, marketing, playlist placement, and viral trends. The takeaway is that intrinsic musical qualities help, yet the business of a hit is driven largely by forces outside the music itself.</p>
@@ -152,14 +153,11 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/tracygiang" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tracygiang/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Tracy Giang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>
