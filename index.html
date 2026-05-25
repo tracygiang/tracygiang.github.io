@@ -19,6 +19,11 @@
 			#one.tiles article:nth-child(6n - 2):before { background-color: #595b64; }
 			#one.tiles article:nth-child(6n - 1):before { background-color: #676974; }
 			#one.tiles article:nth-child(6n):before { background-color: #757783; }
+			/* About Me tile: light window SVG with readable dark text */
+			#one.tiles article.about:before, #one.tiles article.about:after { display: none; }
+			#one.tiles article.about h3 a, #one.tiles article.about p { color: #2a2f45; }
+			#one.tiles article.about header.major h3:after { background-color: #2a2f45 !important; }
+			#one.tiles article.about:hover header:after { content: "View profile \2192"; color: #2a2f45; }
 			/* Project tile hover: darken (keep title readable) + reveal CTA */
 			#one.tiles article:before { transition: opacity 0.4s ease, filter 0.4s ease; }
 			#one.tiles article:hover:before { opacity: 0.92; filter: brightness(0.5); }
@@ -143,7 +148,8 @@ I enjoy using data to find patterns, improve processes, and turn insights into p
 										<p>K-Means clustering for targeted promotions</p>
 									</header>
 								</article>
-							<article>
+							<article class="about">
+								<span class="image"><img src="images/about-bg.svg" alt="" /></span>
 								<header class="major">
 									<h3><a href="https://www.linkedin.com/in/tracygiang/" target="_blank" class="link">About Me</a></h3>
 									<p>I am an MS in Business Analytics candidate at UC Irvine's Paul Merage School of Business, focused on turning data into clear, practical decisions. I am currently looking for full-time analytics roles.</p>
