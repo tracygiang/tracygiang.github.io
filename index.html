@@ -21,6 +21,9 @@
 			#one.tiles article:nth-child(6n):before { background-color: #757783; }
 			/* About Me tile: keep the grey overlay, just a fitting hover label */
 			#one.tiles article.about:hover header:after { content: "View profile \2192"; }
+			/* Banner headshot (circular) */
+			.headshot { display: inline-block; }
+			.headshot img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 28%; border: 4px solid #ffffff; box-shadow: 0 8px 24px rgba(42,47,69,0.3); }
 			/* Project tile hover: darken (keep title readable) + reveal CTA */
 			#one.tiles article:before { transition: opacity 0.4s ease, filter 0.4s ease; }
 			#one.tiles article:hover:before { opacity: 0.92; filter: brightness(0.5); }
@@ -88,9 +91,7 @@
 									
 I enjoy using data to find patterns, improve processes, and turn insights into practical decisions. I’m particularly interested in roles where analytics helps drive customer experience, growth, and operational efficiency.<br />
 								</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
+								<span class="headshot"><img src="images/headshot.png" alt="Tracy Giang" /></span>
 							</div>
 						</div>
 					</section>
