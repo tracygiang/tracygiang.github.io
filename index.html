@@ -19,11 +19,8 @@
 			#one.tiles article:nth-child(6n - 2):before { background-color: #595b64; }
 			#one.tiles article:nth-child(6n - 1):before { background-color: #676974; }
 			#one.tiles article:nth-child(6n):before { background-color: #757783; }
-			/* About Me tile: light window SVG with readable dark text */
-			#one.tiles article.about:before, #one.tiles article.about:after { display: none; }
-			#one.tiles article.about h3 a, #one.tiles article.about p { color: #2a2f45; }
-			#one.tiles article.about header.major h3:after { background-color: #2a2f45 !important; }
-			#one.tiles article.about:hover header:after { content: "View profile \2192"; color: #2a2f45; }
+			/* About Me tile: keep the grey overlay, just a fitting hover label */
+			#one.tiles article.about:hover header:after { content: "View profile \2192"; }
 			/* Project tile hover: darken (keep title readable) + reveal CTA */
 			#one.tiles article:before { transition: opacity 0.4s ease, filter 0.4s ease; }
 			#one.tiles article:hover:before { opacity: 0.92; filter: brightness(0.5); }
