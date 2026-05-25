@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Retail Demand Forecasting</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner:after { display: none; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
+			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+			.project-gallery figure { margin: 0; }
+			.project-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+			.project-gallery figcaption { margin-top: 0.75em; font-size: 0.85em; line-height: 1.5; opacity: 0.75; }
+			.project-gallery figcaption strong { display: block; font-size: 0.8em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.35em; }
+			@media (max-width: 736px) { .project-gallery { grid-template-columns: 1fr; gap: 1.5em; } }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/retail-title.png" alt="Retail Demand Forecasting" />
+							</span>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Retail Demand Forecasting</h1>
+									</header>
+									<p>Predicting daily store sales for a European drugstore chain to support inventory and operations.</p>
+									<ul class="project-meta">
+										<li><strong>Role</strong> Data cleaning, feature engineering &amp; modeling</li>
+										<li><strong>Team</strong> Edmond Chung, Tracy Giang, Ni Min, Chris Nott, Kexin Yu</li>
+										<li><strong>Tools</strong> Python, pandas, scikit-learn, Matplotlib</li>
+										<li><strong>Course</strong> BANA 288, UCI Merage MSBA</li>
+									</ul>
+									<p>Daily store sales swing with promotions, competition, customer traffic, and seasonality. Without accurate forecasts, retailers over-stock or under-stock and make costly operational decisions. Using roughly one million rows of daily data from Rossmann, one of Europe's largest drugstore chains, we built a model to predict each store's daily sales.</p>
+
+									<header class="major">
+										<h2>Approach</h2>
+									</header>
+									<p>We cleaned the data by removing closed-store days and filling missing competition-distance values, engineered time features (year, month, day of week), and split the data 80/20 for training and testing. We compared Linear Regression against a Random Forest, evaluating both on RMSE, MAE, and R-squared.</p>
+									<p>The aim was a forecast accurate enough to guide inventory and staffing, while staying interpretable about what drives sales.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>From the deck</h2>
+									</header>
+									<div class="project-gallery">
+										<figure>
+											<img src="images/retail-background.png" alt="Background slide" />
+											<figcaption><strong>Background</strong>Rossmann operates 3,000+ stores across 7 countries; the goal is short-term demand forecasting.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-data-overview.png" alt="Data overview slide" />
+											<figcaption><strong>Data</strong>One million rows, 18 variables: sales, promotions, store type, competition distance, and dates.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-sales-distribution.png" alt="Daily sales distribution slide" />
+											<figcaption><strong>Sales Distribution</strong>Most stores earn 4,000 to 10,000 euros a day, with a right-skewed tail of high-revenue days.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-promotions.png" alt="Effect of promotions slide" />
+											<figcaption><strong>Promotions</strong>Median sales rise roughly 20 to 30 percent on promotion days, with larger demand spikes.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-model-performance.png" alt="Model performance slide" />
+											<figcaption><strong>Model Performance</strong>Random Forest beat Linear Regression, cutting prediction error by about 9 percent.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-actual-vs-predicted.png" alt="Actual vs predicted sales slide" />
+											<figcaption><strong>Actual vs Predicted</strong>The model tracks normal sales well but underestimates extreme demand spikes.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-key-drivers.png" alt="Revenue key drivers slide" />
+											<figcaption><strong>Key Drivers</strong>Promotions drive sales almost twice as much as competition distance.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-forecasting.png" alt="Operational sales forecasting slide" />
+											<figcaption><strong>Forecasting</strong>Generates a 12-week demand forecast per store to guide staffing and inventory.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/retail-key-findings.png" alt="Key findings slide" />
+											<figcaption><strong>Key Findings</strong>Promotions, timing, and competition all shape sales; Random Forest forecasts them best.</figcaption>
+										</figure>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>What we learned</h2>
+									</header>
+									<p>The clearest driver of sales was promotions, which influenced demand nearly twice as much as competition distance and produced the largest spikes. Random Forest captured these non-linear patterns far better than Linear Regression, reaching an R-squared of about 0.30 and cutting error by roughly 9 percent.</p>
+									<p>The model is reliable for typical store performance and good enough for operational planning like inventory allocation and promotion prep, but it consistently underestimates extreme demand spikes. That gap is the practical limit: forecasting the everyday is solved, while the rare blockbuster days still need a human margin of safety.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

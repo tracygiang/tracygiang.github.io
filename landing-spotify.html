@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>What Makes a Spotify Hit?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner:after { display: none; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
+			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+			.project-gallery figure { margin: 0; }
+			.project-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+			.project-gallery figcaption { margin-top: 0.75em; font-size: 0.85em; line-height: 1.5; opacity: 0.75; }
+			.project-gallery figcaption strong { display: block; font-size: 0.8em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.35em; }
+			@media (max-width: 736px) { .project-gallery { grid-template-columns: 1fr; gap: 1.5em; } }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/spotify-title.png" alt="What Makes a Spotify Hit?" />
+							</span>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>What Makes a Spotify Hit?</h1>
+									</header>
+									<p>Identifying the musical attributes that drive song popularity on Spotify.</p>
+									<ul class="project-meta">
+										<li><strong>Role</strong> Data cleaning, EDA &amp; modeling</li>
+										<li><strong>Team</strong> Kyle Biagan, Hung-En Chen, Zaiqian Deng, Tracy Giang</li>
+										<li><strong>Tools</strong> Python, pandas, scikit-learn, Matplotlib</li>
+										<li><strong>Course</strong> BANA 212, UCI Merage MSBA</li>
+									</ul>
+									<p>Streaming success can look random from the outside. We wanted to know whether a song's popularity could be explained by its audio features alone, such as danceability, energy, valence, and tempo, rather than external factors like playlists or release year. Working with a Kaggle dataset of 952 of Spotify's most-streamed songs, our team built a classifier to separate yearly <strong>&ldquo;Hits&rdquo;</strong> from <strong>&ldquo;Non-Hits&rdquo;</strong> and rank which musical attributes matter most.</p>
+
+									<header class="major">
+										<h2>Approach</h2>
+									</header>
+									<p>We labeled the top 50 most-streamed songs each year as Hits (42.6% of the data) and the rest as Non-Hits. After cleaning identifier and external-platform columns (track name, plus Apple, Deezer, and Shazam charts and playlists) and encoding mode as major or minor, we explored the data with summary statistics, kernel density plots, and a correlation heatmap, then trained a Random Forest to predict hits and rank feature importance.</p>
+									<p>The goal was not just a single accuracy number but an honest read on how much musical attributes alone can explain, and where they fall short.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>From the deck</h2>
+									</header>
+									<div class="project-gallery">
+										<figure>
+											<img src="images/spotify-introduction.png" alt="Introduction slide" />
+											<figcaption><strong>Introduction</strong>Can a song's success be predicted from its audio features alone, isolated from playlists and release year?</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-related-work.png" alt="Related work slide" />
+											<figcaption><strong>Related Work</strong>Prior work leans on metadata like charts and playlists; we focus on intrinsic musical features.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-data-description.png" alt="Data description slide" />
+											<figcaption><strong>Data</strong>952 songs from Kaggle (1930 to 2023); the top 50 most-streamed each year are labeled Hits (42.6%).</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-exploratory.png" alt="Exploratory analysis slide" />
+											<figcaption><strong>Exploratory Analysis</strong>Summary stats show Hits and Non-Hits differ only slightly across danceability, energy, and valence.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-kde.png" alt="KDE distributions slide" />
+											<figcaption><strong>Feature Distributions</strong>KDE plots show Hits and Non-Hits overlap heavily on almost every feature.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-random-forest.png" alt="Random forest results slide" />
+											<figcaption><strong>Random Forest</strong>Accuracy of 0.59, barely above the 0.58 baseline, with hit recall of just 0.38.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-visualizations.png" alt="Visualizations slide" />
+											<figcaption><strong>Visualizations</strong>Predicted probabilities separate only partially; Winter shows the most hits by season.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-results.png" alt="Results and implications slide" />
+											<figcaption><strong>Results</strong>Danceability, BPM, valence, and energy matter most, but audio alone is only moderately predictive.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/spotify-limitation.png" alt="Limitations slide" />
+											<figcaption><strong>Limitations</strong>Audio features ignore artist fame, marketing, playlist placement, and shifting listener trends.</figcaption>
+										</figure>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>What we learned</h2>
+									</header>
+									<p>The clearest finding was a negative one: musical attributes alone are only moderately predictive of streaming success. The Random Forest reached 59% accuracy, barely above the 58% baseline, and missed most actual hits (recall 0.38). The KDE plots explained why: Hits and Non-Hits overlap heavily across nearly every audio feature.</p>
+									<p>Danceability, BPM, valence, and energy were the most useful signals, reflecting a song's rhythm, movement, and emotional brightness. But the gap to a strong model points to everything the audio features cannot see: artist fame, marketing, playlist placement, and viral trends. The takeaway is that intrinsic musical qualities help, yet the business of a hit is driven largely by forces outside the music itself.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

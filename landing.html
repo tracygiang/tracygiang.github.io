@@ -6,11 +6,23 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>Predicting Disney Movie Box Office Success</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner:after { display: none; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
+			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+			.project-gallery figure { margin: 0; }
+			.project-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+			.project-gallery figcaption { margin-top: 0.75em; font-size: 0.85em; line-height: 1.5; opacity: 0.75; }
+			.project-gallery figcaption strong { display: block; font-size: 0.8em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.35em; }
+			@media (max-width: 736px) { .project-gallery { grid-template-columns: 1fr; gap: 1.5em; } }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -45,15 +57,8 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
+								<img src="images/disney-project.png" alt="Predicting Disney Movie Box Office Success" />
 							</span>
-							<header class="major">
-								<h1>Landing</h1>
-							</header>
-							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
-							</div>
 						</div>
 					</section>
 
@@ -64,131 +69,84 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h1>Predicting Disney Movie Box Office Success</h1>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>A machine learning project that classifies Disney films as &ldquo;Hit&rdquo; or &ldquo;Average&rdquo; and uncovers what drives box office success.</p>
+									<ul class="project-meta">
+										<li><strong>Role</strong> Data cleaning, feature engineering &amp; modeling</li>
+										<li><strong>Team</strong> Kyle Biagan, Hung-En Chen, Zaiqian Deng, Tracy Giang</li>
+										<li><strong>Tools</strong> Python, pandas, scikit-learn, Matplotlib</li>
+										<li><strong>Course</strong> BANA 273, UCI Merage MSBA</li>
+									</ul>
+									<p>Studios spend hundreds of millions of dollars without knowing which films will actually perform. We wanted to know whether a movie's box office success could be predicted before release, using only attributes known up front. Working with a Kaggle dataset of 573 Disney films, our team built a classifier that labels a film a <strong>&ldquo;Hit&rdquo;</strong> or <strong>&ldquo;Average&rdquo;</strong> performer and surfaces the factors that matter most.</p>
+
+									<header class="major">
+										<h2>Approach</h2>
+									</header>
+									<p>We defined success by splitting films at the median inflation-adjusted gross, which produced a balanced target rather than a lopsided one. The first honest result came from a mistake worth keeping: an early model scored 90% accuracy, but only because the revenue columns secretly encoded the answer. After removing those leakage variables and the unique identifiers, we cleaned the missing values, engineered temporal features (year, season, decade, and historical success rates), and one-hot encoded the categorical fields into 51 model inputs.</p>
+									<p>From there we trained and tuned four classifiers and compared them on accuracy, F1, and ROC-AUC, with the goal of finding a model that was both reliable and explainable rather than just a single high number.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>From the deck</h2>
+									</header>
+									<div class="project-gallery">
+										<figure>
+											<img src="images/disney-business-problem.png" alt="Business problem slide" />
+											<figcaption><strong>Business Problem</strong>Predicting whether a Disney film will be a Hit or just an Average performer before it ever releases.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-data-description.png" alt="Data description slide" />
+											<figcaption><strong>Data</strong>573 Disney films from Kaggle, covering genre, MPAA rating, release date, and inflation-adjusted gross.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-analytical-methods.png" alt="Analytical methods slide" />
+											<figcaption><strong>Methods</strong>Four classifiers compared, with Random Forest coming out on top at roughly 72% accuracy.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-model-performance.png" alt="Model performance slide" />
+											<figcaption><strong>Leakage Check</strong>A 90% model turned out to be cheating, so we removed the revenue leakage and re-tested honestly.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-descriptive-analysis.png" alt="Descriptive analytics slide" />
+											<figcaption><strong>Descriptive Analytics</strong>Musical, Western, and Adventure led hit rates, while Documentary and Horror trailed at 0%.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-visuals-revenue.png" alt="Revenue patterns slide" />
+											<figcaption><strong>Revenue Patterns</strong>Musical earns the most revenue on average, and Winter is the most profitable release season.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-visuals-model.png" alt="Confusion matrix and feature importance slide" />
+											<figcaption><strong>Model Deep-Dive</strong>The model nails hits, 44 of 51 correct, leaning most on historical success and timing features.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-analysis-results.png" alt="Analysis and results slide" />
+											<figcaption><strong>Results</strong>Random Forest won at 71.84% accuracy with 86% recall on hits, ahead of all other models.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/disney-implications.png" alt="Implications and actions slide" />
+											<figcaption><strong>Implications</strong>Lean into Musical and Adventure, and match release timing to each genre's peak season.</figcaption>
+										</figure>
 									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
+								</div>
 							</section>
 
 						<!-- Three -->
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h2>What we learned</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
+									<p>The biggest lesson was about data leakage. A model that looks excellent can be quietly cheating, and catching that early changed the whole project. Once we removed the leak, the honest Random Forest reached about 72% accuracy with a strong 86% recall on hits, and the feature importances told a clear story: a film's historical track record, genre, season, and rating carry real predictive signal, while raw revenue does not belong in the inputs at all.</p>
+									<p>We also learned where the model should stop. At 72% accuracy it is a useful screening tool, not a greenlight, and it cannot see the things that often decide a movie's fate: script, casting, direction, and word of mouth. The practical takeaway for a studio is to lean into Musical and Adventure titles, match release timing to each genre's strongest season, and treat the model as one input to a human decision rather than the decision itself.</p>
 								</div>
 							</section>
 
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
 
 				<!-- Footer -->
 					<footer id="footer">

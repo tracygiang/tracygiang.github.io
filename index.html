@@ -11,6 +11,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Project tile hover: darken (keep title readable) + reveal CTA */
+			#one.tiles article:before { transition: opacity 0.4s ease, filter 0.4s ease; }
+			#one.tiles article:hover:before { opacity: 0.92; filter: brightness(0.5); }
+			#one.tiles article header:after {
+				content: 'View project \2192';
+				display: block;
+				margin-top: 0.75em;
+				font-size: 0.6em;
+				font-weight: 700;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				opacity: 0;
+				transform: translateY(8px);
+				transition: opacity 0.4s ease, transform 0.4s ease;
+			}
+			#one.tiles article:hover header:after { opacity: 1; transform: translateY(0); }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -65,47 +83,47 @@ I enjoy using data to find patterns, improve processes, and turn insights into p
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/disney-project.png" alt="Predicting Disney Movie Box Office Success" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Aliquam</a></h3>
-										<p>Ipsum dolor sit amet</p>
+										<h3><a href="landing.html" class="link">Predicting Disney Box Office Success</a></h3>
+										<p>Machine learning to classify films as Hit or Average</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/spotify-title.png" alt="What Makes a Spotify Hit?" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Tempus</a></h3>
-										<p>feugiat amet tempus</p>
+										<h3><a href="landing-spotify.html" class="link">What Makes a Spotify Hit?</a></h3>
+										<p>Predicting song popularity from musical attributes</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="images/hospital-title.png" alt="Hospital Management System" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Magna</a></h3>
-										<p>Lorem etiam nullam</p>
+										<h3><a href="landing-hospital.html" class="link">Hospital Management System</a></h3>
+										<p>Relational database design, normalization &amp; SQL</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="images/retail-title.png" alt="Retail Demand Forecasting" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Ipsum</a></h3>
-										<p>Nisl sed aliquam</p>
+										<h3><a href="landing-retail.html" class="link">Retail Demand Forecasting</a></h3>
+										<p>Predicting daily store sales with Random Forest</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="images/amazon-title.png" alt="Amazon Customer Segmentation" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Consequat</a></h3>
-										<p>Ipsum dolor sit amet</p>
+										<h3><a href="landing-amazon.html" class="link">Amazon Customer Segmentation</a></h3>
+										<p>K-Means clustering for targeted promotions</p>
 									</header>
 								</article>
 								<article>
@@ -133,59 +151,6 @@ I enjoy using data to find patterns, improve processes, and turn insights into p
 							</section>
 
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
 
 				<!-- Footer -->
 					<footer id="footer">

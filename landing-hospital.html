@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hospital Management System</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner:after { display: none; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
+			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+			.project-gallery figure { margin: 0; }
+			.project-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+			.project-gallery figcaption { margin-top: 0.75em; font-size: 0.85em; line-height: 1.5; opacity: 0.75; }
+			.project-gallery figcaption strong { display: block; font-size: 0.8em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.35em; }
+			@media (max-width: 736px) { .project-gallery { grid-template-columns: 1fr; gap: 1.5em; } }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/hospital-title.png" alt="Hospital Management System" />
+							</span>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Hospital Management System</h1>
+									</header>
+									<p>A normalized relational database for hospital operations, from ER design to SQL analytics.</p>
+									<ul class="project-meta">
+										<li><strong>Role</strong> Database design, normalization &amp; SQL</li>
+										<li><strong>Team</strong> Edmond Chung, Tracy Giang, Sarah Lee, Kimberly Nguyen, Rachel Ton</li>
+										<li><strong>Tools</strong> MySQL, SQL, Lucidchart</li>
+										<li><strong>Course</strong> UCI Merage MSBA</li>
+									</ul>
+									<p>A hospital runs on many moving parts: patients, doctors, appointments, surgeries, rooms, beds, and billing. We designed a centralized relational database to integrate all of these into one consistent system, then validated it through normalization and answered real operational questions with SQL.</p>
+
+									<header class="major">
+										<h2>Approach</h2>
+									</header>
+									<p>We modeled 14 entities from a Kaggle Hospital Management System dataset, documented metadata and cardinality for each, and built an ER diagram and relational model with primary and foreign keys. We then checked every table against third normal form (3NF), fixing the one violation we found, and wrote 10 analytical SQL queries to surface operational insights.</p>
+									<p>The goal was a database that is both clean enough to trust and useful enough to answer questions managers actually ask.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>From the deck</h2>
+									</header>
+									<div class="project-gallery">
+										<figure>
+											<img src="images/hospital-context.png" alt="Context and business background slide" />
+											<figcaption><strong>Context</strong>Built for hospitals and large healthcare systems that need centralized, integrated operational data.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-erd.png" alt="ER diagram slide" />
+											<figcaption><strong>ER Diagram</strong>Fourteen entities mapped with their cardinality relationships and business rules.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-relationships.png" alt="Entity relationships slide" />
+											<figcaption><strong>Relationships</strong>One patient has many records; one department has many doctors, nurses, and wards.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-relational-model.png" alt="Relational data model slide" />
+											<figcaption><strong>Relational Model</strong>Every table keyed with primary and foreign keys to enforce referential integrity.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-dependency.png" alt="As-is dependency diagrams slide" />
+											<figcaption><strong>Dependency Diagrams</strong>Each table checked for full, partial, and transitive dependencies.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-3nf-surgery.png" alt="SurgeryRecord 3NF fix slide" />
+											<figcaption><strong>3NF Fix</strong>SurgeryRecord had a transitive dependency (surgeon to surgery type), split into its own table.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-3nf-summary.png" alt="3NF status summary slide" />
+											<figcaption><strong>3NF Status</strong>Thirteen of fourteen tables were already 3NF; only SurgeryRecord needed restructuring.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-query1.png" alt="SQL query patient appointments slide" />
+											<figcaption><strong>Query: Appointments</strong>Joins patients and doctors to show who is assigned to which appointment.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-query3.png" alt="SQL query revenue per department slide" />
+											<figcaption><strong>Query: Revenue</strong>Ranks departments by total appointments and revenue; General Medicine leads.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-query7.png" alt="SQL query patient demographics slide" />
+											<figcaption><strong>Query: Demographics</strong>Breaks patients down by age group and gender across the system.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-query8.png" alt="SQL query top diagnoses slide" />
+											<figcaption><strong>Query: Diagnoses</strong>General Checkup, Migraine, and Hypertension are the most common diagnoses.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/hospital-scope.png" alt="Future scope slide" />
+											<figcaption><strong>Future Scope</strong>Predictive demand forecasting, real-time dashboards, and patient risk scoring.</figcaption>
+										</figure>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>What we learned</h2>
+									</header>
+									<p>Designing this database showed how much structure matters before any analysis begins. Normalizing to 3NF removed redundancy and update anomalies, and surfaced a subtle transitive dependency in SurgeryRecord that we would have missed otherwise. With a clean schema in place, ten SQL queries were enough to answer practical questions about appointments, revenue, bed capacity, demographics, and doctor workload.</p>
+									<p>The bigger takeaway was that good data modeling is itself an analytical skill. A well-designed schema makes future work, from dashboards to predictive models, far easier, while a messy one quietly limits everything built on top of it.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

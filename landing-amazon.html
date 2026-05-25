@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Amazon Customer Segmentation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner:after { display: none; }
+			.project-meta { list-style: none; padding: 0; margin: 0 0 1.5em 0; }
+			.project-meta li { display: inline-block; margin: 0 2.5em 0.5em 0; }
+			.project-meta strong { display: block; font-size: 0.7em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.25em; }
+			.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+			.project-gallery figure { margin: 0; }
+			.project-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+			.project-gallery figcaption { margin-top: 0.75em; font-size: 0.85em; line-height: 1.5; opacity: 0.75; }
+			.project-gallery figcaption strong { display: block; font-size: 0.8em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.35em; }
+			@media (max-width: 736px) { .project-gallery { grid-template-columns: 1fr; gap: 1.5em; } }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/amazon-title.png" alt="Customer Segmentation to Improve Amazon's Promotional Strategies" />
+							</span>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Customer Segmentation to Improve Amazon's Promotional Strategies</h1>
+									</header>
+									<p>Using clustering to group customers by purchasing behavior and target promotions more effectively.</p>
+									<ul class="project-meta">
+										<li><strong>Role</strong> Data prep, clustering &amp; profiling</li>
+										<li><strong>Team</strong> Kyle Biagan, Alec Burris, Hung-En Chen, Zaiqian Deng, Tracy Giang</li>
+										<li><strong>Tools</strong> Python, scikit-learn, K-Means, PCA</li>
+										<li><strong>Course</strong> UCI Merage MSBA</li>
+									</ul>
+									<p>Amazon's customers vary widely in demographics, region, and spending, which makes broad discounts inefficient and sometimes unprofitable. We set out to segment customers by purchasing behavior so that promotions can be targeted to the groups most likely to respond.</p>
+
+									<header class="major">
+										<h2>Approach</h2>
+									</header>
+									<p>We cleaned customer-level data, selected key features (price, discount, rating), and applied K-Means clustering. We validated the segments with silhouette score, stability (ARI), and a permutation test, then used PCA to visualize separation and profiled each cluster into a marketing persona.</p>
+									<p>The aim was not just to form clusters but to confirm they were statistically real and meaningful enough to act on.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>From the deck</h2>
+									</header>
+									<div class="project-gallery">
+										<figure>
+											<img src="images/amazon-marketing-question.png" alt="Marketing question slide" />
+											<figcaption><strong>Marketing Question</strong>How can Amazon target promotions by segmenting customers on purchasing behavior?</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-approach.png" alt="Analytical approach slide" />
+											<figcaption><strong>Approach</strong>Data prep, K-Means clustering, validation, and persona profiling with PCA.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-data-description.png" alt="Data description slide" />
+											<figcaption><strong>Data</strong>Price, discount percentage, rating, PCA components, and K-Means cluster labels.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-cluster-validation.png" alt="Internal cluster validation slide" />
+											<figcaption><strong>Validation</strong>K=5 chosen; ARI 0.80 and a permutation test (p=0.048) confirm real structure.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-clustering.png" alt="Clustering slide" />
+											<figcaption><strong>Clustering</strong>Five segments emerge, from premium buyers to budget and clearance shoppers.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-pca-scatterplot.png" alt="PCA scatterplot slide" />
+											<figcaption><strong>PCA Separation</strong>Quality seekers and premium buyers separate clearly; price-sensitive groups overlap.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-heatmap.png" alt="Segment features heatmap slide" />
+											<figcaption><strong>Segment Features</strong>Each cluster profiled by average price, discount, rating, and engagement.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-results.png" alt="Results slide" />
+											<figcaption><strong>Results</strong>Five distinct personas driven by price intensity and quality-seeking behavior.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-implications.png" alt="Managerial implications slide" />
+											<figcaption><strong>The 4 P's</strong>Tailor product, price, place, and promotion to each customer segment.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-recommendations.png" alt="Recommendations slide" />
+											<figcaption><strong>Recommendations</strong>Give premium buyers perks, discount-seekers coupons, and price-sensitive buyers essentials.</figcaption>
+										</figure>
+										<figure>
+											<img src="images/amazon-limitations.png" alt="Challenges and limitations slide" />
+											<figcaption><strong>Limitations</strong>No true customer-level IDs; product-focused features and a snapshot in time.</figcaption>
+										</figure>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>What we learned</h2>
+									</header>
+									<p>K-Means surfaced five clear customer personas: price-sensitive, premium, popularity-driven, quality seekers, and discount-sensitive frequent buyers. Crucially, the segments held up under scrutiny: a mean ARI of 0.80 across seeds and a significant permutation test (p=0.048) showed the structure was real, not an artifact of the algorithm.</p>
+									<p>The personas translate directly into strategy: offer premium buyers exclusive perks rather than discounts, reach deal-seekers with coupons, and highlight budget essentials for price-sensitive shoppers. The main caveat is that the dataset is product-focused and lacks true customer identifiers, so the segments are inferred behavioral patterns that should be validated against Amazon's internal CRM data before a full rollout.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
