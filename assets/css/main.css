@@ -2158,6 +2158,13 @@ input, select, textarea {
 		background-color: #37a6cb;
 	}
 
+	#footer .icons a.icon.alt:before {
+		height: 2.75em;
+		line-height: 2.75em;
+		width: 2.75em;
+		font-size: 1.05em;
+	}
+
 /* Image */
 
 	.image {
